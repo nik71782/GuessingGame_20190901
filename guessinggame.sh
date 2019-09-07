@@ -23,5 +23,3 @@ read response
 echo "$response"
 GuessedCorrect "$response"
 done
-
-
