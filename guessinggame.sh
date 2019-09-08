@@ -1,9 +1,7 @@
 #!/bin/bash
 
-function GuessedCorrect {
 NumberOffiles=$(ls -l | grep "^-" | wc -l)
-echo "$NumberOffiles"
-echo "$1"
+function GuessedCorrect {
 if [[ "$1" -eq "$NumberOffiles" ]]
 then
 	echo "Congratulations! You guessed right"
@@ -20,6 +18,5 @@ while [ "$flag" -eq 0 ]
 do
 echo "How many files are there in this directory?"
 read response
-echo "$response"
 GuessedCorrect "$response"
 done
